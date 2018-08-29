@@ -28,9 +28,15 @@ const api = (function() {
 		});
 	};
 
+	const findAndUpdate = (id, newData) => {
+		const foundItem = this.items[id];
+		Object.assign(foundItem, newData);
+	};
+
 	return {
 		getItems,
 		createItem,
-		updateItem
+		updateItem,
+		findAndUpdate
 	};
 })();
